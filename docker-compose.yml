@@ -1,1 +1,22 @@
 version: "3.7"
+
+services:
+
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - ./src:/src
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+
+  php:
+    image: chialab/php:7.3-fpm
+    volumes:
+      - ./src:/src
+
+networks:
+
