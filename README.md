@@ -16,6 +16,10 @@ Simple but effective docker-compose setup for using nginx with php-fpm.
 
 ## Info
 
+### PHP Image
+
+We use the `chialab/php:7.3-fpm` image for chialab that contains a lot of common php dependencies. 
+
 ### Credits
 
 The basic setup is inspired by [this](http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7-fpm/).
